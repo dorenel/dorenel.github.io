@@ -1,12 +1,154 @@
+/* general body style. */
 body, html {
   height: 100%;
   margin: 0;
 }
 
-.bg {
-  background-image: url("./background.jpg");
+/* default font for the site. */
+.site-font {
+  font-family: 'Baloo 2', sans-serif;
+}
+
+/* override the default color scheme of the buttons. */
+.btn-primary {
+  border-color: rgb(115, 115, 115);
+  background-color: rgba(226, 226, 226, 0.8);
+  color: rgb(85, 85, 85);
+}
+
+.btn-primary:hover {
+  border-color: rgba(92, 92, 92, 0.8);
+  background-color: rgba(92, 92, 92, 0.8);
+}
+
+.btn-primary:active:focus {
+  background: rgba(226, 226, 226, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(201, 201, 201, 0.5);
+}
+
+/* custom navbar styles. */
+.navbar-custom {
+  background-color: rgba(80, 80, 80, 0.8);
+  font-size: 17px;
+}
+
+/* navbar dropdown menu styles. */
+.dropdown-custom {
+  background-color: rgba(80, 80, 80, 0.8);
+  color: white;
+}
+
+/* navbar dropdown options styles. */
+.dropdown-option {
+  color: white;
+  top: -250px;
+}
+
+/* styles for the about section. */
+.about {
+  background-image: url("./images/about.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.6;
 }
+
+/* styles for the projects section. */
+.projects {
+  background-image: url("./images/projects.jpg");
+  background-color: rgba(255, 255, 255, 0.6);  /* use semi-transparent white for opacity. */
+  background-blend-mode: lighten; /* blend image with background color. */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 8%;
+  padding-bottom: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.project-intro {
+  background-image: url("./images/mitlogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color:rgb(126, 33, 33, 0.9);
+  background-blend-mode: luminosity;
+  color: white;
+}
+
+.card-custom {
+  width: 95%;
+  height: 110%;
+  scroll-margin-top: 100px; /* add this for some buffer on top when jumping to the cards thru navbar */
+}
+
+.card-body-custom {
+  margin-left: 4%;
+}
+
+.card-small-text {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.card-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-left:15px;
+}
+
+/* styles for the more section. */
+.more {
+  background-color: rgb(248, 248, 248);
+  height: 100%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+
+#more-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/more.jpg");
+  border-radius: 3%;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%;
+}
+
+#more-intro {
+  color: rgb(78, 78, 78);
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+}
+
+.more-card {
+  width: 100%;
+  height: 100%;
+  scroll-margin-top: 100px;
+}
+
+.more-img {
+  width: 10em;
+  height: 10em;
+}
+
+.more-button {
+  margin-right: 8px;
+}
+
+/* styles for the contact section. */
+.contact {
+  background-image: url("./images/contact.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+

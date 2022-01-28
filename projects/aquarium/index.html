@@ -1,0 +1,67 @@
+<html>
+    <body style="background-image:url('background.jpg');background-size:cover">
+    <div id="area" background>
+        <button id="addButton" onClick="addFish()">Add Fish</button>
+        <button id="startButton" onClick="startAquarium()">Start Aquarium</button>
+    </div>
+    </body>
+    <script>
+        var fishes = [];
+        const fishImgs = [ ["fish1-r.png", "fish1-l.png"], ["fish2-r.png", "fish2-l.png"], ["fish3-r.png", "fish3-l.png"], ["fish4-r.png", "fish4-l.png"]];
+        
+        function addFish() {
+            position = {};
+            position.x = Math.random() * 1200;
+            position.y = Math.random() * 600;
+
+            velocity = {};
+            velocity.x = (Math.random() * 2) + 1;
+            velocity.y = Math.random() * 0.5;
+
+            direction = Math.floor(Math.random() * 2);
+            console.log(direction);
+            if (direction === 1) {
+                velocity.x *= -1;
+                console.log(velocity.x);
+            }
+
+            let sprite = document.createElement('img');
+            let rand = Math.floor(Math.random()*4);
+            img = fishImgs[rand];
+            sprite.src = img[direction];
+            console.log(sprite.src);
+            rand = Math.floor(Math.random()*60 + 20)
+            sprite.width = rand;
+            sprite.style.position = "absolute";
+            sprite.style.top = position.y + "px";
+            sprite.style.left = position.x + "px";
+            sprite.style.filter = "hue-rotate(" + (Math.random() * 180) + "deg)";
+            document.getElementById('area').append(sprite);
+
+            fishes.push({ sprite, position, velocity, direction, img });
+        }
+
+        function renderFishes() {
+            for (fish of fishes) {
+                if ((fish.position.x + fish.velocity.x + fish.sprite.width > window.innerWidth) ||
+                    (fish.position.x < 0)) {
+                        fish.velocity.x *= -1;
+                        fish.direction = (fish.direction + 1) % 2;
+                        fish.sprite.src = fish.img[fish.direction];
+                }
+                if ((fish.position.y + fish.velocity.y + fish.sprite.height > window.innerHeight) ||
+                    (fish.position.y < 0)) {
+                        fish.velocity.y *= -1;
+                }
+                fish.position.x += fish.velocity.x;
+                fish.position.y += fish.velocity.y;
+                fish.sprite.style.top = fish.position.y;
+                fish.sprite.style.left = fish.position.x;
+            }
+        }
+
+        function startAquarium() {
+            setInterval(renderFishes, 20);
+        }
+    </script>
+</html>

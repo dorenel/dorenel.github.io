@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Maps</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />     
+        <link href="./styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="track" class="top"><button id="button" onClick="track()">Start Tracking</button></div>
+        <div id="legendBox" class="top">
+            <div id="legendLabel">Legends</div>
+            <div class="legendImage"><img class="markerImage" src="images/red.png"></div>
+            <div class="legendItem">Northbound Buses</div>
+            <div class="legendImage"><img class="markerImage" src="images/blue.png"></div>
+            <div class="legendItem">Southbound Buses</div>
+        </div>
+        <script src="./mapanimation.js"></script>
+    </body>
+</html>

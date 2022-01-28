@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.label {
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cell {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.country:nth-of-type(even) {
+    background: lightblue;
+    font-weight: bold;
+}
+
+.country:nth-of-type(odd) {
+    background: cadetblue;
+    font-weight: bold;
+}
+
+.confirmed:nth-of-type(even), .critical:nth-of-type(odd), .deaths:nth-of-type(even), .recovered:nth-of-type(odd) {
+    background: burlywood;
+}
+
+.confirmed:nth-of-type(odd), .critical:nth-of-type(even), .deaths:nth-of-type(odd), .recovered:nth-of-type(even) {
+    background: lightgoldenrodyellow;
+}
+
+.highlight {
+    background: orange;
+    font-weight: bold;
+}

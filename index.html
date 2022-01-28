@@ -7,57 +7,184 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS style sheet -->
     <link href="./styles.css" rel="stylesheet">
     
     <title>Dorene's Portfolio</title>
   </head>
   <body>
-    <div class="bg">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <font class="site-font">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="#">home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Resume</a>
+              <a class="nav-link active" aria-current="page" href="#about-container">about</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Projects
+              <a class="nav-link dropdown-toggle" href="#projects-container" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                projects
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Pac Man</a></li>
-                <li><a class="dropdown-item" href="#">Eye Movement</a></li>
-                <li><a class="dropdown-item" href="#">Bus Tracker</a></li>
+              <ul class="dropdown-menu dropdown-custom" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item dropdown-option" href="#pacmen">PacMen Exercise</a></li>
+                <li><a class="dropdown-item dropdown-option" href="#eyemovement">Eye Movement</a></li>
+                <li><a class="dropdown-item dropdown-option" href="#bustracker">Bus Tracker</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                More...
+                more...
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">World Covid Tracker</a></li>
-                <li><a class="dropdown-item" href="#">Aquarium</a></li>
+              <ul class="dropdown-menu dropdown-custom" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item dropdown-option" href="#aquarium">Aquarium</a></li>
+                <li><a class="dropdown-item dropdown-option" href="#covid">World Covid Tracker</a></li>
+                <li><a class="dropdown-item dropdown-option" href="#pacman">PacMan Game</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#">contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- about -->
+    <div id="about-container" class="about">
     </div>
     
+    <!-- projects -->
+    <div id="projects-container" class="projects">
+      <div class="row gx-1 gy-5">
+        <div class="col-sm-6">
+          <div class="card card-custom">
+            <div class="card-body project-intro">
+              <h5 class="card-title">MIT/xPro Class Projects</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="pacmen" class="card card-custom">
+            <img src="./images/pacmen.png" class="card-img-top card-img-custom">
+            <div class="card-body card-body-custom">
+              <h5 class="card-title">PacMen Exercise</h5>
+              <p class="card-text">Create multiple moving PacMans around the screen.
+              <br><font class ="card-small-text">Javascript, HTML</font>
+              </p>
+              <a href="https://github.com/dorenel/projects/pacmenexercise/index.html" class="btn btn-primary card-button">Try It</a>
+              <a href="https://github.com/dorenel/PacMen-Exercise" class="btn btn-primary card-button">Github Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="eyemovement" class="card card-custom">
+            <img src="./images/eyemovement.png" class="card-img-top card-img-custom">
+            <div class="card-body card-body-custom">
+              <h5 class="card-title">Eye Movement</h5>
+              <p class="card-text">Animated eyes movement following the mouse.
+              <br><font class="card-small-text">Javascript, HTML, CSS</font>
+              </p>
+              <a href="https://github.com/dorenel/projects/eyemovement/index.html" class="btn btn-primary card-button">Try It</a>
+              <a href="https://github.com/dorenel/Eye-Exercise" class="btn btn-primary card-button">Github Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="bustracker" class="card card-custom">
+            <img src="./images/bustracker.png" class="card-img-top card-img-custom">
+            <div class="card-body card-body-custom">
+              <h5 class="card-title">Bus Tracker</h5>
+              <p class="card-text">Real time bus tracking map in Boston.
+              <br><font class="card-small-text">APIs, Javascript, HTML, CSS</font>
+              </p>
+              <a href="https://github.com/dorenel/projects/bustracker/index.html" class="btn btn-primary card-button">Try It</a>
+              <a href="https://github.com/dorenel/Real-Time-Bus-Tracker" class="btn btn-primary card-button">Github Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- more -->
+    <div id="more-container" class="more">   
+      <div id="more-background"> 
+        <div class="row row-cols-1 row-cols-md-1 gx-4 gy-2">
+          <div class="col">
+            <div id="more-intro">
+              <div class="row g-0">Additional projects...</div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="aquarium" class="card mb-0 more-card">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="./images/aquarium.png" class="img-fluid rounded-start more-img">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Aquarium Simulation</h5>
+                    <p class="card-text">Add fishes to this simulated aquarium. An extension of the PacMen exercise.</p>
+                    <a href="https://github.com/dorenel/projects/aquarium/index.html" class="btn btn-primary btn-sm more-button">Try It</a>
+                    <a href="https://github.com/dorenel/aquarium" class="btn btn-primary btn-sm">Github Repo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="covid" class="card mb-0 more-card">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="./images/covid.png" class="img-fluid rounded-start more-img">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">World Covid Tracker</h5>
+                    <p class="card-text">A real time tracker of Covid cases around the world. An extension of the Bus Tracker exercise.</p>
+                    <a href="https://github.com/dorenel/projects/covid/index.html" class="btn btn-primary btn-sm more-button">Try It</a>
+                    <a href="https://github.com/dorenel/covid" class="btn btn-primary btn-sm">Github Repo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="pacman" class="card mb-0 more-card">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="./images/pacman.png" class="img-fluid rounded-start more-img">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">PacMan Game</h5>
+                    <p class="card-text">Guide PacMan around to collect the dots. An extension of the PacMan exercise.</p>
+                    <a href="https://github.com/dorenel/projects/pacman/index.html" class="btn btn-primary btn-sm more-button">Try It</a>
+                    <a href="https://github.com/dorenel/pacman" class="btn btn-primary btn-sm">Github Repo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact-container" class="contact">
+    </div>
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  
+    </font>
   </body>
 </html>
