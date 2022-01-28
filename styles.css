@@ -21,9 +21,16 @@ body, html {
   background-color: rgba(92, 92, 92, 0.8);
 }
 
-.btn-primary:active:focus {
+.btn-primary:active, .btn-primary:focus {
   background: rgba(226, 226, 226, 0.8);
   box-shadow: 0 0 0 0.2rem rgba(201, 201, 201, 0.5);
+}
+
+.btn-primary:visited {
+  border-color: rgb(115, 115, 115);
+  background-color: rgba(226, 226, 226, 0.8);
+  color: rgb(85, 85, 85);
+  box-shadow: none !important;
 }
 
 /* custom navbar styles. */
