@@ -9,28 +9,21 @@ body, html {
   font-family: 'Baloo 2', sans-serif;
 }
 
-/* override the default color scheme of the buttons. */
-.btn-primary {
+/* override the color scheme of the buttons. */
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
   border-color: rgb(115, 115, 115);
   background-color: rgba(226, 226, 226, 0.8);
   color: rgb(85, 85, 85);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   border-color: rgba(92, 92, 92, 0.8);
   background-color: rgba(92, 92, 92, 0.8);
-}
-
-.btn-primary:active, .btn-primary:focus {
-  background: rgba(226, 226, 226, 0.8);
-  box-shadow: 0 0 0 0.2rem rgba(201, 201, 201, 0.5);
-}
-
-.btn-primary:visited {
-  border-color: rgb(115, 115, 115);
-  background-color: rgba(226, 226, 226, 0.8);
-  color: rgb(85, 85, 85);
-  box-shadow: none !important;
+  color: white;
 }
 
 /* custom navbar styles. */
@@ -39,13 +32,11 @@ body, html {
   font-size: 17px;
 }
 
-/* navbar dropdown menu styles. */
 .dropdown-custom {
   background-color: rgba(80, 80, 80, 0.8);
   color: white;
 }
 
-/* navbar dropdown options styles. */
 .dropdown-option {
   color: white;
   top: -250px;
@@ -54,18 +45,106 @@ body, html {
 /* styles for the about section. */
 .about {
   background-image: url("./images/about.jpg");
+  background-color: rgba(255, 255, 255, 0.4);  /* use semi-transparent white for opacity. */
+  background-blend-mode: lighten; /* blend image with background color. */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.6;
+}
+
+#about-top {
+  width: 25%;
+  height: 10%;
+  position: absolute;
+  margin-top: 23%;
+  margin-left: 10%;
+  background-image: url("./images/aboutme.jpg");
+  background-color: rgba(255, 255, 255, 0.6);  
+  background-blend-mode: lighten; 
+  border-radius: 5px;
+}
+
+#about-top-content {
+  width: 95%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 5px;
+  border-style: solid;
+  border-color:rgba(80, 80, 80, 0.6);
+  padding-top: 2%;
+  padding-left: 3%;
+  color:rgba(92, 92, 92, 0.6);
+  font-size: 20px;
+}
+
+#about-middle {
+  width: 60%;
+  height: 37%;
+  position: absolute;
+  margin-top: 27%;
+  margin-left: 20%;
+  background-color:rgb(78, 78, 78, 0.2);
+  border-radius: 20px;
+}
+
+#about-middle-content {
+  width: 95%;
+  height: 96%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(245, 245, 245, 0.9);
+  color:rgba(92, 92, 92, 0.8);
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+#about-bottom {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  margin-top: 44%;
+  margin-left: 75%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#about-image {
+  width: 115px;
+  height: 115px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("./images/pic.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#about-links {
+  text-align: center;
+}
+
+.about-button {
+  margin-right: 5%;
+  color:rgba(92, 92, 92, 0.8);
 }
 
 /* styles for the projects section. */
 .projects {
   background-image: url("./images/projects.jpg");
-  background-color: rgba(255, 255, 255, 0.6);  /* use semi-transparent white for opacity. */
-  background-blend-mode: lighten; /* blend image with background color. */
+  background-color: rgba(255, 255, 255, 0.6);  
+  background-blend-mode: lighten; 
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,8 +159,9 @@ body, html {
   background-image: url("./images/mitlogo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-color:rgb(126, 33, 33, 0.9);
-  background-blend-mode: luminosity;
+  /* background-color:rgb(126, 33, 33, 0.9); */
+  background-color:rgba(80, 80, 80, 0.6);
+  background-blend-mode: difference;
   color: white;
 }
 
@@ -121,7 +201,7 @@ body, html {
   width: 100%;
   height: 100%;
   background-image: url("./images/more.jpg");
-  border-radius: 3%;
+  border-radius: 20px;
   padding-top: 3%;
   padding-left: 10%;
   padding-right: 10%;
@@ -152,10 +232,63 @@ body, html {
 /* styles for the contact section. */
 .contact {
   background-image: url("./images/contact.jpg");
+  background-color: rgba(255, 255, 255, 0.6);  
+  background-blend-mode: lighten; 
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.6;
+}
+
+.contact-item {
+  width: 60%;
+  height: 13%;
+  position: absolute;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+.contact-image {
+  width: 5em;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#linkedin-image-background {   /* special styling for the LinkedIn logo legal requirement. */
+  width: 4em;
+  height: 4em;
+  background-color: white;
+}
+
+.linkedin-image {
+  background-color: transparent;
+  border-radius: 0%;
+}
+
+.contact-info {
+  padding-top: 2%;
+  padding-left: 2%;
+  font-size: 2em;
+  color:rgba(80, 80, 80, 0.9);
+}
+
+.contact-info:hover {
+  color:rgba(92, 92, 92, 0.7);
+}
+
+#contact-email {
+  margin-top: 17%;
+  margin-left: 31%;
+}
+
+#contact-github {
+  margin-top: 25%;
+  margin-left: 40%;
+}
+
+#contact-linkedin {
+  margin-top: 35%;
+  margin-left: 32%;
 }
 
