@@ -118,18 +118,18 @@ body, html {
 }
 
 #about-bottom {
-  width: 130px;
-  height: 130px;
+  width: 15%;
+  aspect-ratio: 1/1;
   position: absolute;
-  margin-top: 46%;
+  margin-top: 42%;
   margin-left: 74%;
   background-color: white;
   border-radius: 50%;
 }
 
 #about-image {
-  width: 115px;
-  height: 115px;
+  width: 85%;
+  aspect-ratio: 1/1;
   position: absolute;
   top: 50%;
   left: 50%;
