@@ -47,5 +47,5 @@ function renderPosts(posts) {
     });
 }
 
-//getPosts();
-getSample();
+getPosts();
+//getSample();
